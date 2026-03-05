@@ -2156,3 +2156,31 @@ details[open] .accordion-summary::before { transform: rotate(45deg); }
   outline: 2px solid var(--color-gold);
   outline-offset: 3px;
 }
+
+/* ─── 27. CONSTRUCTION BANNER ───────────────────────────────── */
+.construction-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background-color: var(--color-terracotta);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  padding: 0.55rem var(--space-md);
+  text-align: center;
+  position: relative;
+  z-index: 200;
+}
+
+.construction-banner__text {
+  line-height: 1.4;
+}
+
+.construction-banner__icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
