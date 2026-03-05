@@ -8,6 +8,8 @@
   <meta property="og:title" content="Moriscos &amp; the Ottoman Empire — PhD Thesis Portfolio">
   <meta property="og:description" content="How did 300,000 expelled Spaniards navigate empires, faith, and exile? A PhD dissertation as scrollytelling experience.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero/constantinople-1572.jpg">
+  <meta name="theme-color" content="#162039">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
@@ -249,6 +251,19 @@
             <p>"The Moriscos of Valencia and Aragon sent envoys to Istanbul in 1577, bearing gifts — and offering to fund an Ottoman fleet."</p>
             <cite>— Yunus Doğan, <em>Moriscos and the Ottoman Empire</em></cite>
           </blockquote>
+          <!-- SVG route line: Spain → Istanbul, drawn on scroll via stroke-dashoffset in main.js -->
+          <div class="route-map reveal" aria-hidden="true">
+            <svg class="route-svg" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path class="route-path" d="M 30,80 C 80,60 120,40 180,50 C 240,60 260,30 320,35 C 380,40 420,60 480,55 C 530,50 560,45 580,40" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="30" cy="80" r="4" fill="#C9A84C"/>
+              <text x="25" y="100" font-family="'Source Sans 3',sans-serif" font-size="10" fill="#A89880">Valencia</text>
+              <circle cx="580" cy="40" r="4" fill="#C9A84C"/>
+              <text x="548" y="30" font-family="'Source Sans 3',sans-serif" font-size="10" fill="#A89880">Istanbul</text>
+              <circle cx="320" cy="35" r="3" fill="#B85C38"/>
+              <text x="305" y="25" font-family="'Source Sans 3',sans-serif" font-size="9" fill="#A89880">Venice</text>
+            </svg>
+            <p class="route-label">The 1577 diplomatic mission: Valencia → Venice → Istanbul</p>
+          </div>
         </div>
         <div class="chapter-image reveal">
           <figure>

@@ -1528,6 +1528,116 @@ meter::-webkit-meter-optimum-value {
   line-height: var(--leading-base);
 }
 
+/* Glossary search */
+.glossary-search-wrap {
+  margin: var(--space-md) 0;
+}
+
+.glossary-search {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-light);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.glossary-search:focus {
+  border-color: var(--color-gold);
+}
+
+.glossary-search::placeholder {
+  color: var(--color-text-muted);
+}
+
+.glossary-no-results {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+.glossary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.glossary-nav-link {
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-gold);
+  text-decoration: none;
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.glossary-nav-link:hover {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.glossary-category-heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-subheading);
+  color: var(--color-gold);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding-bottom: var(--space-xs);
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.glossary-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.glossary-entry {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.glossary-term {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: 0.25rem;
+}
+
+.glossary-def {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  padding-left: var(--space-md);
+  line-height: var(--leading-base);
+}
+
+.glossary-entry[hidden] {
+  display: none;
+}
+
+/* Visually hidden utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .glossary-category {
   font-family: var(--font-serif);
   font-size: var(--text-subheading);
@@ -1537,6 +1647,31 @@ meter::-webkit-meter-optimum-value {
   margin: var(--space-lg) 0 var(--space-md);
 }
 
+
+/* ─── 23a. ROUTE MAP SVG ────────────────────────────────────── */
+.route-map {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+.route-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.route-path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.route-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
 
 /* ─── 23b. RESEARCHER PAGE — ADDITIONAL COMPONENTS ─────────── */
 

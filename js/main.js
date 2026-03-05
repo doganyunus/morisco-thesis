@@ -191,6 +191,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // ─── CHAPTER II ROUTE SVG DRAW ─────────────────────────────────
+    const routePath = document.querySelector('.route-path');
+    if (routePath) {
+      gsap.to(routePath, {
+        strokeDashoffset: 0,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#chapter-2',
+          start: 'top 60%',
+          end: 'bottom 40%',
+          scrub: 1
+        }
+      });
+    }
+
   } // end if (!prefersReducedMotion)
 
   // ─── COUNTER ANIMATION ─────────────────────────────────────────
@@ -236,6 +251,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateActiveSection(id) {
     // No per-section nav highlighting needed beyond what aria-current handles
+  }
+
+  // ─── GLOSSARY SEARCH FILTER (sources.html only) ───────────────
+  const glossaryInput = document.getElementById('glossary-search');
+  const noResults = document.getElementById('glossary-no-results');
+  if (glossaryInput) {
+    const entries = document.querySelectorAll('.glossary-entry');
+    glossaryInput.addEventListener('input', () => {
+      const query = glossaryInput.value.trim().toLowerCase();
+      let visible = 0;
+      entries.forEach(entry => {
+        const term = entry.querySelector('.glossary-term');
+        const def = entry.querySelector('.glossary-def');
+        const text = ((term ? term.textContent : '') + ' ' + (def ? def.textContent : '')).toLowerCase();
+        if (!query || text.includes(query)) {
+          entry.removeAttribute('hidden');
+          visible++;
+        } else {
+          entry.setAttribute('hidden', '');
+        }
+      });
+      if (noResults) {
+        noResults.hidden = visible > 0 || !query;
+      }
+    });
   }
 
 });
